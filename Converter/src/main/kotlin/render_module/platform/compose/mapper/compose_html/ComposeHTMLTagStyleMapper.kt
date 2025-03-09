@@ -1,0 +1,66 @@
+package render_module.platform.compose.mapper.compose_html
+
+import SpanStyle
+import parser_module.platform.html.tag.HTMLTagType
+import render_module.core.TagStyleMapper
+
+class ComposeHTMLTagStyleMapper : TagStyleMapper<SpanStyle> {
+    override fun getSpanStyleForTag(tagName: String): SpanStyle {
+        return when (HTMLTagType.fromString(tagName)) {
+            HTMLTagType.DIV -> SpanStyle()
+            HTMLTagType.P -> SpanStyle()
+            HTMLTagType.A -> SpanStyle()
+            HTMLTagType.B -> SpanStyle()
+            HTMLTagType.U -> SpanStyle()
+            HTMLTagType.IMG -> SpanStyle()
+            HTMLTagType.SPAN -> SpanStyle()
+            HTMLTagType.H1 -> SpanStyle()
+            HTMLTagType.H2 -> SpanStyle()
+            HTMLTagType.H3 -> SpanStyle()
+            HTMLTagType.H4 -> SpanStyle()
+            HTMLTagType.H5 -> SpanStyle()
+            HTMLTagType.H6 -> SpanStyle()
+            HTMLTagType.UL -> SpanStyle()
+            HTMLTagType.OL -> SpanStyle()
+            HTMLTagType.LI -> SpanStyle()
+            HTMLTagType.STRONG -> SpanStyle()
+            HTMLTagType.EM -> SpanStyle()
+            HTMLTagType.BR -> SpanStyle()
+            HTMLTagType.HR -> SpanStyle()
+            HTMLTagType.BLOCKQUOTE -> SpanStyle()
+            HTMLTagType.CODE -> SpanStyle()
+            HTMLTagType.PRE -> SpanStyle()
+            HTMLTagType.TABLE -> SpanStyle()
+            HTMLTagType.TR -> SpanStyle()
+            HTMLTagType.TD -> SpanStyle()
+            HTMLTagType.TH -> SpanStyle()
+            HTMLTagType.FORM -> SpanStyle()
+            HTMLTagType.INPUT -> SpanStyle()
+            HTMLTagType.BUTTON -> SpanStyle()
+            HTMLTagType.LABEL -> SpanStyle()
+            HTMLTagType.TEXTAREA -> SpanStyle()
+            HTMLTagType.SELECT -> SpanStyle()
+            HTMLTagType.OPTION -> SpanStyle()
+            HTMLTagType.HEADER -> SpanStyle()
+            HTMLTagType.FOOTER -> SpanStyle()
+            HTMLTagType.NAV -> SpanStyle()
+            HTMLTagType.SECTION -> SpanStyle()
+            HTMLTagType.ARTICLE -> SpanStyle()
+            HTMLTagType.ASIDE -> SpanStyle()
+            HTMLTagType.MAIN -> SpanStyle()
+            HTMLTagType.VIDEO -> SpanStyle()
+            HTMLTagType.AUDIO -> SpanStyle()
+            HTMLTagType.SOURCE -> SpanStyle()
+            HTMLTagType.IFRAME -> SpanStyle()
+            HTMLTagType.CANVAS -> SpanStyle()
+            HTMLTagType.SCRIPT -> SpanStyle()
+            HTMLTagType.STYLE -> SpanStyle()
+            HTMLTagType.LINK -> SpanStyle()
+            HTMLTagType.META -> SpanStyle()
+            HTMLTagType.TITLE -> SpanStyle()
+            HTMLTagType.HEAD -> SpanStyle()
+            HTMLTagType.BODY -> SpanStyle()
+            else -> SpanStyle()
+        }
+    }
+}
