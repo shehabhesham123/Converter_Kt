@@ -4,15 +4,17 @@ import parser_module.core.abstraction.TagMatcher
 import java.util.regex.Pattern
 
 class HTMLTagMatcher : TagMatcher<HTMLMatcherResult?> {
-    private val tagPattern = Pattern.compile("""<(\w+:\w+|\w+)([^>]*)>(.*?)</\1>""", Pattern.DOTALL)
-    //private val tagPattern = Pattern.compile("""<(\w+:\w+|\w+)([^>]*)(/>|>(.*?)</\1>)""", Pattern.DOTALL)
+
+    private val tagPattern = Pattern.compile("""<(\w+:\w+|\w+)([^>]*)(/>|>(.*?)</\1>)""", Pattern.DOTALL)
 
     override fun match(code: String): HTMLMatcherResult? {
         val matcher = tagPattern.matcher(code)
         if (!matcher.find()) return null
         val tagName = matcher.group(1).trim()
         val attributes = matcher.group(2).trim()
-        val content = matcher.group(3).trim()
+        val isSelfClosing = matcher.group(3).trim() == "/>"
+        val content = if (isSelfClosing) "" else matcher.group(4).trim()
+
         return HTMLMatcherResult(tagName, attributes, content)
     }
 

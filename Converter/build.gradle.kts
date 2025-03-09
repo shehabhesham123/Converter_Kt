@@ -16,6 +16,7 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.0")
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.10.0") // For parameterized tests
     testImplementation("org.assertj:assertj-core:3.24.2") // Optional: For assertions
+    implementation("org.jsoup:jsoup:1.17.2")
 }
 
 tasks.test {

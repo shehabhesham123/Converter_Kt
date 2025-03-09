@@ -51,7 +51,7 @@ class HTMLTagFactory(private val htmlTagCreator: HTMLTagCreator) : TagFactory<HT
      * - If the tag name is blank or contains invalid characters, an [IllegalArgumentException] is thrown.
      */
     override fun createTag(tagName: String?, attributes: Map<String, String>): HTMLTag {
-        return tagName?.takeIf { it.isNotBlank() && it.matches(Regex("[a-zA-Z][a-zA-Z0-9-]*")) }?.let {
+        return tagName?.takeIf { it.isNotBlank() && it.matches(Regex("[a-zA-Z][a-zA-Z0-9:-]*")) }?.let {
             htmlTagCreator.createTag(it, attributes)
         } ?: throw IllegalArgumentException("Tag name cannot be null or invalid")
     }
