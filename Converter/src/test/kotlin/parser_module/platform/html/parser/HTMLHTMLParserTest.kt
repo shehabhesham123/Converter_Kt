@@ -13,7 +13,7 @@ import parser_module.platform.html.matcher.HTMLTagMatcher
 import parser_module.platform.html.tag.HTMLTag
 import kotlin.test.assertEquals
 
-class HTMLParserTest {
+class HTMLHTMLParserTest {
 
     lateinit var parser: Parser<List<HTMLTag>>
 

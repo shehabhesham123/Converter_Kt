@@ -1,9 +1,12 @@
+/*
 package jsoup_parser_module
 
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import org.jsoup.nodes.TextNode
+*/
+/**//*
 
 
 class Parser {
@@ -15,6 +18,7 @@ class Parser {
         traverseTree(root, 0)
     }
 
+*/
 /*    fun traverseTree2(element: Element, depth: Int) {
         for (i in 0..<depth) print("  ") // Indentation
         var attr = ""
@@ -27,7 +31,8 @@ class Parser {
             child.append("{Child}")
             traverseTree2(child, depth + 1)
         }
-    }*/
+    }*//*
+
 
     fun traverseTree(element: Element, depth: Int) {
 
@@ -57,3 +62,4 @@ class Parser {
         println("${"  ".repeat(depth)}Modified Text: $parentText")
     }
 }
+*/
